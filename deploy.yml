@@ -17,10 +17,10 @@ spec:
       - name: techtrends
         image: desjenkins/techtrends:latest
         resources:
-          limits:
+          requests:
             memory: "64Mi"
             cpu: "250m"
-          requests:
+          limits:
             memory: "128Mi"
             cpu: "500m"
         ports:
@@ -33,3 +33,4 @@ spec:
           httpGet:
             path: /healthz
             port: 3111
+
